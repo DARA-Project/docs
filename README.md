@@ -15,7 +15,7 @@ The Dara pipeline is highlighted in the following figure
 As shown in the pipeline, Dara is made up of multiple parts.
 This section outlines what role each repository plays in the Dara pipeline.
 
-+ [dara](https://github.com/DARA-Project/dara) : This repository implements the model inference, model refinement, and the abstract model checker parts of Dara.
++ [dara](https://github.com/DARA-Project/dara) : This repository implements the model inference, model refinement, the abstract model checker, and trace filtering parts of Dara.
 + [godist](https://github.com/DARA-Project/GoDist) : A custom modified version of Go v1.10 which provides the necessary interposition to schedule specific Go threads and capture system calls.
 + [godist-scheduler](https://github.com/DARA-Project/GoDist-Scheduler) : This repository implements the concrete state explorer and the replay engine all of which are sub-parts of our concrete model checker.
 
