@@ -50,7 +50,7 @@ Assuming, Go 1.10 and its sources are installed at the location "/usr/lib/go-1.1
 execute the following commands to install dgo
 
 ```
-   > cd $GOPATH/src/DARA-Project/GoDist/src
+   > cd $GOPATH/src/github.com/DARA-Project/GoDist/src
    > export GOROOT_BOOTSTRAP="/usr"
    > sudo ./make.bash
    > cd ../
@@ -63,7 +63,7 @@ Installing the Model Inference Unit (dara) requires you must have docker install
 Once you have docker installed, you can simply run the following commands
 
 ```
-   > cd $GOPATH/src/DARA-Project/dara
+   > cd $GOPATH/src/github.com/DARA-Project/dara
    > sudo docker build -t dara/1.0 -f ./docker/Dockerfile .
 ```
 
@@ -72,6 +72,6 @@ Once you have docker installed, you can simply run the following commands
 Once you have everything installed, you can install the global scheduler as follows:
 
 ```
-   > cd $GOPATH/src/DARA-Project/GoDist-Scheduler
+   > cd $GOPATH/src/github.com/DARA-Project/GoDist-Scheduler
    > dgo install
 ```
