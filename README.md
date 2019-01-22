@@ -73,8 +73,6 @@ Recording and replaying requires shared memory for IPC and for the environment t
 
 The same run.sh script is also used to record and replay exectuions. 
 
-The ```Program``` variable in the run script is the name of the go file that contains the main function for running the system.
-
 #### Record
 
 To record the execution of a program, run the following command in the same directory as the run script and the program:
@@ -82,6 +80,8 @@ To record the execution of a program, run the following command in the same dire
 ```
    > sudo -E ./run.sh -record=true
 ```
+
+The recorded execution schedule will be written to a file called ```Schedule.json```
 
 #### Replay
 
