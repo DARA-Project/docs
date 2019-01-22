@@ -13,6 +13,7 @@ System-specific repositories (for systems we check with Dara):
 ## Installation Instructions
 
 To be able to run Dara, you must have all the following things installed.
+For doing Record/Replay, you only need to have godist and godist-scheduler installed.
 It is suggested that you install them in the following order.
 
 ### Cloning Repos
@@ -41,7 +42,6 @@ To install GoDist, execute the following commands:
    > cd $GOPATH/src/github.com/DARA-Project/GoDist/src
    > export GOROOT_BOOTSTRAP="/usr/lib/go-1.10"
    > ./make.bash
-   > cd ../
    > sudo ln -s $GOPATH/src/github.com/DARA-Project/GoDist/bin/go /usr/bin/dgo
 ```
 
@@ -61,4 +61,33 @@ Once you have the above installed, you are ready to install the global scheduler
 ```
    > cd $GOPATH/src/github.com/DARA-Project/GoDist-Scheduler
    > dgo install
+```
+
+## Usage Instructions
+
+### Record + Replay
+
+#### Environment setup
+
+Recording and Replaying requires shared memory and the environment to be set up for communication between the global scheduler and the local Go runtimes. This is automated as part of the run script we provide in sample examples in the GoDist-Scheduler repository.
+An example of this script can be found [here](https://github.com/DARA-Project/GoDist-Scheduler/blob/master/examples/SimpleFileRead/run.sh)
+
+The same run script is also used to record and replay exectuions. 
+
+The ```Program``` variable in the run script is the name of the go file that contains the main function for running the system.
+
+#### Record
+
+To record the execution of a program, run the following command in the same directory as the run script and the program:
+
+```
+   > sudo -E ./run.sh -record=true
+```
+
+#### Replay
+
+To replay the execution of a program, run the following command in the same directory as the run script and the program,
+
+```
+   > sudo -E ./run.sh -replay=true
 ```
