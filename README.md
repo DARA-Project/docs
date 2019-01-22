@@ -10,7 +10,7 @@ System-specific repositories (for systems we check with Dara):
 + [BTCD-applications](https://github.com/DARA-Project/BTCD-Applications) : Contains information for verifying [BTCD](https://github.com/btcsuite/btcd), a full node bitcoin implementation in Golang.
 + [Dara-ETCD](https://github.com/DARA-Project/Dara-Etcd) : Contains information for verifying [ETCD](https://github.com/etcd-io/etcd), a distributed key-value store that uses the Raft consensus algorithm.
 
-## Installation Instructions
+## How to install
 
 To be able to run Dara, you must have all the following things installed.
 For doing Record/Replay, you only need to have godist and godist-scheduler installed.
@@ -63,16 +63,15 @@ Once you have the above installed, you are ready to install the global scheduler
    > dgo install
 ```
 
-## Usage Instructions
+## How to use
 
-### Record + Replay
+### Record + Replay usage
 
 #### Environment setup
 
-Recording and Replaying requires shared memory and the environment to be set up for communication between the global scheduler and the local Go runtimes. This is automated as part of the run script we provide in sample examples in the GoDist-Scheduler repository.
-An example of this script can be found [here](https://github.com/DARA-Project/GoDist-Scheduler/blob/master/examples/SimpleFileRead/run.sh)
+Recording and replaying requires shared memory for IPC and for the environment to be set up for communication between the global scheduler and the local Go runtimes. This is automated by a run.sh script in the GoDist-Scheduler repo: [example run.sh](https://github.com/DARA-Project/GoDist-Scheduler/blob/master/examples/SimpleFileRead/run.sh)
 
-The same run script is also used to record and replay exectuions. 
+The same run.sh script is also used to record and replay exectuions. 
 
 The ```Program``` variable in the run script is the name of the go file that contains the main function for running the system.
 
