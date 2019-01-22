@@ -35,8 +35,9 @@ all the repos should be located under the GOPATH root as any other Go library wo
 Thus you should clone all repos as follows (this assumes that you have GOPATH environment variable set) : 
 
 ```
-   > cd $GOPATH/src
+   > cd $GOPATH/src/github.com
    > mkdir DARA-Project
+   > cd DARA-Project
    > git clone https://github.com/DARA-Project/GoDist.git
    > git clone https://github.com/DARA-Project/dara.git
    > git clone https://github.com/DARA-Project/GoDist-Scheduler.git
@@ -51,10 +52,10 @@ execute the following commands to install dgo
 
 ```
    > cd $GOPATH/src/github.com/DARA-Project/GoDist/src
-   > export GOROOT_BOOTSTRAP="/usr"
-   > sudo ./make.bash
+   > export GOROOT_BOOTSTRAP="/usr/lib/go-1.10"
+   > ./make.bash
    > cd ../
-   > sudo ln -s bin/go /usr/bin/dgo
+   > sudo ln -s $GOPATH/src/github.com/DARA-Project/GoDist/bin/go /usr/bin/dgo
 ```
 
 ### Installing dara
