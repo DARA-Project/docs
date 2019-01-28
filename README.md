@@ -45,6 +45,12 @@ To install GoDist, execute the following commands:
    > sudo ln -s $GOPATH/src/github.com/DARA-Project/GoDist/bin/go /usr/bin/dgo
 ```
 
+You can check if the installation of dgo succeeded by executing the following command and comparing its output
+
+```
+   > which dgo # Output should be /usr/bin/dgo
+```
+
 ### Installing dara
 
 Installing the Model Inference Unit (dara) requires you to have docker. Run the following commands for installation:
