@@ -54,6 +54,7 @@ You can check if the installation of dgo succeeded by executing the following co
 ### Installing dara
 
 Installing the Model Inference Unit (dara) requires you to have docker. Run the following commands for installation:
+Currently this is not being USED.
 
 ```
    > cd $GOPATH/src/github.com/DARA-Project/dara
@@ -61,6 +62,17 @@ Installing the Model Inference Unit (dara) requires you to have docker. Run the 
 ```
 
 ### Installing GoDist-Scheduler
+
+#### Dependencies
+
+Install the dependencies for global scheduler as follows:
+
+```
+    > cd $GOPATH/src/github.com/DARA-Project/GoDist-Scheduler
+    > ./dependencies.sh
+```
+
+#### Installation
 
 Once you have the above installed, you are ready to install the global scheduler:
 
